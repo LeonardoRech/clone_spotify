@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="root">
+        <nav class="nav-bar d-flex flex-column">
+            <div class="nav-bar-header d-flex ps-4 pt-4 pb-4">
+                <img src="./img/logo.svg" alt="LOGO" class="logo">
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link d-flex align-items-center">
+                        <i class="fas fa-home"></i>
+                        <span>Início</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center">
+                        <i class="fas fa-search"></i>
+                        <span>Buscar</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center">
+                        <i class="fas fa-stream"></i>
+                        <span>Sua Biblioteca</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="root-list d-flex flex-column mt-4">
+                <div class="root-list-header">
+                    <h2>Playlists</h2>
+                </div>
+                <div class="root-list-body">
+                    <div class="root-list-item d-flex">
+                        <div class="root-list-icon add d-flex justify-content-center align-items-center">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <span>Criar Playlist</span>
+                    </div>
+                    <div class="root-list-item d-flex">
+                        <div class="root-list-icon heart d-flex justify-content-center align-items-center">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <span>Músicas Curtidas</span>
+                    </div>
+                </div>
+                <hr class="root-list-divider" />
+            
+                <ul class="navbar-nav play-list-scroll overflow-auto">
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Músicas de filmes que marcaram</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">HipHop</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Rock</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Sertanejo</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Funk</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Populares</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">MPB</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Trilhas Sonoras</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Poadcast</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">E-Book</a>
+                    </li>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Hits do verão</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Gustavo Lima</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Maluma</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Ariana Grande</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Jennifer Lopez</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Latina</a>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Anos 50</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Anos 60</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Anos 70</a>
+                    </li>
+                    <li class="play-list-item d-flex align-items-center">
+                        <a href="#">Anos 80</a>
+                    </li><li class="play-list-item d-flex align-items-center">
+                        <a href="#">Anos 90</a>
+                    </li><li class="play-list-item d-flex align-items-center">
+                        <a href="#">Anos 2000</a>
+                    </li><li class="play-list-item d-flex align-items-center">
+                        <a href="#">Europa</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-footer">
+                    <a href="#" class="dflex align-item-center">
+                        <i class="fas fa-arrow-circle-down mr-3"></i>
+                        <span>Instalar Aplicativo</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="top-bar">
+            <header id="header" class="d-flex header position-relative">
+                <div id="header-overlay"></div>    
+                <div class="icons-action-left d-flex">
+                        <button class="d-flex justify-content-center align-items-center" >
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="d-flex justify-content-center align-items-center ms-3" >
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="d-flex ms-auto">
+                        <button class="btn-upgrade">Faça Upgrade</button>
+                        <div class="dropdown menu ms-3 mt-1">
+                            <button type="button" class="d-flex align-items-center" data-toggle="dropdown">
+                                <img src="./img/avatar.svg" class="avatar" alt="">
+                                <span>Leonardo Rech</span>
+                                <i class="fas fa-caret-down ms-2 me-2"></i>
+                            </button>
+                            <div class="dropdown-menu mt-0 p-0">
+                                <a href="#" class="dropdown-item">Conta</a>
+                                <a href="#" class="dropdown-item">Perfil</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">Sair</a>
+                            </div>
+                        </div>
+                    </div>
+            </header>
+        </div>
+        <div id="main" class="main d-flex flex-column">
+            <div class="margin-top"></div>
+            <div class="main-container">
+                <h2 class="title mb-3">Tocado recentemente</h2>
+                <div class="row list mb-5">
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://i.scdn.co/image/16fb6ba8f65f74d4c06f87cd89cad6cc1a4f87b7" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Que dia é hoje?</h5>
+                                    <p class="card-text">Trovão Mídia</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://i.scdn.co/image/ab67656300005f1fba61a88bd0bbda4ddb6231bd
+                                " class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Sofia</h5>
+                                    <p class="card-text">Spotify Studios</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb6ad57a3cb26ae3ffd0f28f22/1/pt/default" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Daily Mix 1</h5>
+                                    <p class="card-text">Bad Bunny, Los Legendários, Rauw Alejandro e mais</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="	https://i.scdn.co/image/ab67706f00000002238e6eeb111d2f88991526a3" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Pagodin</h5>
+                                    <p class="card-text">Os lançamentos mais esperados do Pagode</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://i.scdn.co/image/ab67706f00000002fe9dc05d01471e1917d46c6b" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Top Tracks of 2020</h5>
+                                    <p class="card-text">The Global Top Tracks of 2020. Cover: The Weekend</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://i.scdn.co/image/ab67706f00000002c87d7ab0dc1d4ae2341ec9e3" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Dia de Faxina</h5>
+                                    <p class="card-text">Hits brasileiros dos útlimos anos para animar sua faxina</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            
+            
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <div>
+                        <h2 class="title mb-1">Feito para Você</h2>
+                        <span class="subtitle">Quanto mais você escutar, melhores as recomendações vai receber.</span>
+                    </div>
+                    <a href="#" class="view-more ms-auto">Ver tudo</a>
+                </div>
+                <div class="row list mb-5">
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://i.scdn.co/image/ab67706f00000002bd0e19e810bb4b55ab164a95" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Mood Booster</h5>
+                                    <p class="card-text">Get happy with today's dose of feel-food songs!</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://i.scdn.co/image/ab67706f0000000213a02d059c0479e65a850267" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Feelin' Good</h5>
+                                    <p class="card-text">Feel good with this positively timeless playlist!</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://i.scdn.co/image/ab67706f00000002e582276a98655a4ab00102cd" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Home Office</h5>
+                                    <p class="card-text">Uma seleção good vibes pra você trabalhar de boa!</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://i.scdn.co/image/ab67706f00000002fbabce11ab019931ca40c588" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Drinks no Sofá</h5>
+                                    <p class="card-text">Conforto para beber gin, tônica, mojito ou caipirinha do seu sofá!</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_br_default.jpg" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">To 50 - Brazil</h5>
+                                    <p class="card-text">Brasil: seu realtório diário das faixas mais tocadas no país.</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_default.jpg" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Top 50 - Mundo</h5>
+                                    <p class="card-text">Mundo: seu relatório diário das faixas mais tocadas no mundo.</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <div>
+                        <h2 class="title mb-1">Tops no Brasil</h2>
+                        <span class="subtitle">Top hits tocados no Brasil.</span>
+                    </div>
+                    <a href="#" class="view-more ms-auto">Ver tudo</a>
+                </div>
+                <div class="row list mb-5">
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://i.scdn.co/image/ab67616d00001e023947fe6a943dffbef90605ed" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Piseiro 2020 Ao Vivo</h5>
+                                    <p class="card-text">TrOs Barões da Pisadinha</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02919f0fdc261e13d17d10db40" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Pulei Na Piscina (Ao Vivo)</h5>
+                                    <p class="card-text">Guilherme & Benuto</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://i.scdn.co/image/ab67706f0000000238b55fe7acb7040639b7cfe6" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Hora do Rush</h5>
+                                    <p class="card-text">Já que estamos aqui, pelo menos vamos ouvir música!</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://i.scdn.co/image/ab67706f000000020c527c5b3a3398fc24082d5b" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Trabalhando de Casa</h5>
+                                    <p class="card-text">Uma seleção de hits pra te acompanhar no home-office</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://i.scdn.co/image/ab67706f0000000256129c736f24e674b40cd694" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">Aesthetic Lofi</h5>
+                                    <p class="card-text">Aesthetic vibes that just make sense</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="#">
+                                <img src="https://i.scdn.co/image/ab67706f000000027167eb6d4a218db90a6d440a" class="card-img-top rouded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="#">
+                                    <h5 class="card-title">QBrega Funk</h5>
+                                    <p class="card-text">A trilha da sarrada perfeita!</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="player d-flex align-items-center">
+            <footer class="w-100">
+                <div class="row">
+                    <div class="col-3 d-flex align-items-center">
+                        <div class="cover">
+                            <img src="https://i.scdn.co/image/ab67616d000048513947fe6a943dffbef90605ed" alt="">
+                        </div>
+                        <div class="d-flex flex-column text ms-3 me-3">
+                            <label class="m-0">Piseiro Estourou (Ao Vivo)</label>
+                            <span class="color-default">Barões da Pisadinha</span>
+                        </div>
+                        <div class="d-flex icon justify-content-center align-items-center">
+                            <i class="far fa-heart color-default"></i>
+                        </div>
+                        <div class="d-flex icon justify-content-center align-items-center">
+                            <i class="fas fa-image color-default"></i>
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex align-items-center justify-content-center">
+                        <div class="player-center">
+                            <div class="d-flex player-center-controls justify-content-between align-items-center">
+                                <button class="icon btn btn-link d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-random color-default"></i>
+                                </button>
+                                <button class="icon btn btn-link d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-angle-left color-default"></i>
+                                </button>
+                                <button class="play icon btn btn-link d-flex justify-content-center align-items-center">
+                                    <i class="far fa-play-circle color-default"></i>
+                                </button>
+                                <button class="icon btn btn-link d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-angle-right color-default"></i>
+                                </button>
+                                <button class="icon btn btn-link d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-redo color-default"></i>
+                                </button>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="progress-time">
+                                    <span class="color-default">0:00</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
+                                </div>
+                                <div class="progress-time">
+                                    <span class="color-default">3:09</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex align-items-center justify-content-end">
+                        <button class="icon btn btn-link d-flex justify-content-center align-items-center">
+                            <i class="fas fa-list-ul color-default"></i>
+                        </button>
+                        <button class="icon btn btn-link d-flex justify-content-center align-items-center">
+                            <i class="fas fa-desktop color-default"></i>
+                        </button>
+                        <button class="icon btn btn-link d-flex justify-content-center align-items-center">
+                            <i class="fas fa-volume-up color-default"></i>
+                        </button>
+                        <div class="volume-bar">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        let main = document.getElementById('main');
+        let header = document.getElementById('header-overlay');
+        main.addEventListener('scroll', function(event) {
+            var scroll = this.scrollTop;
+            if(scroll < 60){
+                header.style.opacity = '.'+scroll
+            }else{
+                header.style.opacity= 1
+            }
+
+        })
+    </script>
+</body>
+</html>
